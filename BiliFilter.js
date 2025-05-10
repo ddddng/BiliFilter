@@ -116,7 +116,7 @@
       url: BACKEND_ENDPOINT,
       headers: { 'Content-Type': 'application/json' },
       data: JSON.stringify({
-        model: 'gemma3_4b_bilibili_filter_v2',
+        model: 'gemma3_4b_BiliFilter_v2',
         messages: [{ role: 'user', content: prompt }]
       }),
       onload: resp => {
