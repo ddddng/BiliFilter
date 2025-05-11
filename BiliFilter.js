@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BiliFilter
 // @namespace    https://example.com/
-// @version      21                     // CHG
+// @version      22
 // @description  Filtering Bilibili danmaku via local LLM
 // @author       dddng
 // @match        https://www.bilibili.com/*
@@ -31,7 +31,7 @@
 视频标题：`;
 
   const CLASS_PAT = /^bili-danmaku-x-/;
-  const log = (...a) => DEBUG && console.debug('[DanmakuFilter]', ...a);
+  const log = (...a) => DEBUG && console.debug('[BiliFilter]', ...a);
 
   GM_addStyle(`.gpt-danmaku-hidden{${HIDE_BEFORE_RESPONSE ? 'visibility:hidden!important;' : ''}}`);
 
@@ -125,7 +125,7 @@
         maybeSendNext();           // 继续调度
       },
       onerror: err => {
-        console.error('[DanmakuFilter] request error', err);
+        console.error('[BiliFilter] request error', err);
         discardBatch(batch);       // 失败视作未分类
         activeRequests--;
         maybeSendNext();
