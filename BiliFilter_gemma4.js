@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BiliFilter
 // @namespace    https://example.com/
-// @version      24
+// @version      25
 // @description  Filtering Bilibili danmaku via local LLM
 // @author       dddng
 // @match        https://www.bilibili.com/*
@@ -18,7 +18,7 @@
   const BACKEND_ENDPOINT = 'http://127.0.0.1:1234/v1/chat/completions';
   const BATCH_SIZE = 10;
   const BATCH_TIMEOUT = 500; // ms
-  const KEEP_CATEGORIES = new Set(['正常', '未分类']);  // CHG: 保留“未分类”
+  const KEEP_CATEGORIES = new Set(['正常', 'normal', '未分类']);  // CHG: 保留“未分类”
   const DEBUG = false;
   const SHOW_CATEGORY = false;                // true: show "弹幕 [分类]"
   const HIDE_BEFORE_RESPONSE = true;         // true: API 返回前隐藏弹幕
