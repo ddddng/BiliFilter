@@ -10,7 +10,7 @@
 
 现已提供新版模型：
 
-[`dddng/e4b_bilifilter`](https://huggingface.co/dddng/e4b_bilifilter)
+[`gemma4_e4b_bilifilter`](https://huggingface.co/dddng/gemma4_e4b_bilifilter)
 
 如果你想体验新版模型，请使用新版脚本：
 
