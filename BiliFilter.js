@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BiliFilter
 // @namespace    https://example.com/
-// @version      22
+// @version      23
 // @description  Filtering Bilibili danmaku via local LLM
 // @author       dddng
 // @match        https://www.bilibili.com/*
@@ -109,7 +109,7 @@
     activeRequests++;
 
     const title = cleanTitle(document.querySelector('h1')?.innerText || document.title);
-    const prompt = `${PROMPT_HEADER}${title}\n待分类弹幕：\n${batch.map(i => i.text).join('\n')}`;
+    const prompt = `${PROMPT_HEADER}${title}\n${batch.map((i, idx) => `弹幕${idx + 1}：${i.text}`).join('\n')}`;
 
     GM_xmlhttpRequest({
       method: 'POST',
