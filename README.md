@@ -6,7 +6,27 @@
 借助 **[LM Studio](https://lmstudio.ai/)** 的 OpenAI 兼容本地接口，你可以在本地过滤B站弹幕。浏览器中只需安装脚本。
 
 ---
+## 📢 新模型通知
 
+现已提供新版模型：
+
+[`dddng/e4b_bilifilter`](https://huggingface.co/dddng/e4b_bilifilter)
+
+如果你想体验新版模型，请使用新版脚本：
+
+```text
+BiliFilter_gemma4.js
+```
+
+### 新模型安装方法
+
+1. 在 LM Studio 中下载新版模型：[`dddng/e4b_bilifilter`](https://huggingface.co/dddng/e4b_bilifilter)
+2. 启动 LM Studio 的本地 OpenAI 兼容服务器
+3. 确认已启用 **CORS**
+4. 在 Tampermonkey 中安装 `BiliFilter_gemma4.js`
+5. 保存脚本并刷新 Bilibili 视频页面
+
+> 对旧模型 `dddng/gemma3_4b_BiliFilter_v2`的支持可能会在未来被移除 
 ## ✨ 特性
 
 * **本地运行**：所有推理均在本地完成  
